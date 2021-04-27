@@ -1,23 +1,33 @@
-<mat-card>
+<div class="login-container">
 
 
-  <mat-card-content>
+  <mat-card>
+    <mat-card-header>
+    </mat-card-header>
+
+    <mat-card-content>
+
+      <mat-card-title>Please login to continue</mat-card-title>
 
       <mat-form-field appearance="none">
         <input matInput placeholder="User Name">
         <mat-icon matPrefix svgIcon="family"></mat-icon>
       </mat-form-field>
 
-    <mat-form-field appearance="none">
-      <input matInput [type]="hide ? 'password' : 'text'">
-      <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
-        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-      </button>
-    </mat-form-field>
+      <mat-form-field appearance="none">
+        <input matInput [type]="hide ? 'password' : 'text'">
+        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                [attr.aria-pressed]="hide">
+          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+      </mat-form-field>
+      <button mat-button>Continue</button>
+      <mat-checkbox>Remember me</mat-checkbox>
+    </mat-card-content>
 
-  </mat-card-content>
+  </mat-card>
 
-</mat-card>
 
+</div>
 
 
