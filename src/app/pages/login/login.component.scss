@@ -1,66 +1,75 @@
-.login-container {
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
 
-  background-image: url("../../../assets/images/fEiiAFCszqW8THGArcpAG4.jpg");
+.login-container {
+  background-image: url("../../../assets/images/globos.png");
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
 
-  .mat-card-content {
-    margin: auto;
-    text-align: center;
-  }
-
-  .mat-card-header {
-    width: 100%;
-    height: 79px;
-    margin: 0 0 50px;
-    opacity: 0.61;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
-    //border: solid 1px var(--pinkish-grey);
-    background-color: #ffffff;
-  }
-
-  .mat-card {
+  .login-body {
     width: 615px;
-    height: 463px;
+    display: inline-block;
     padding: 0 0 19px;
     border-radius: 8px;
     box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.25);
-    background-color: rgba(199, 199, 199, 0.74);
-
-  }
-  .mat-icon {
-    padding-left: 15px;
-    font-size: 10px;
-    width: 10px;
+    background-color: rgba(199, 199, 199, 0.79);
   }
 
+  .login-content {
+    color: #231f20;
+    margin: auto;
+    text-align: center;
+    letter-spacing: normal;
+  }
 
-  .mat-form-field {
-    width: 90%;
+
+
+  .login-title {
+    font-size: 24px;
+    font-weight: bolder;
+    line-height: 1.17;
+    padding: 0 0 5px;
+    font-family: Rubik;
+  }
+
+  .login-header {
+    width: 100%;
+    height: 79px;
+    margin: 0 0 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.61);
+
+    .logo-img {
+      width: 265px;
+      height: 45px;
+    }
+
+  }
+
+  .form-checkbox {
+    margin: 0 20px;
+    font-size: 16px;
+    color: #818181;
+    line-height: 1.19
+  }
+
+  .login-button {
+    width: 80%;
     height: 66px;
-    margin-bottom: 1rem;
-    //padding: 10px 298px 9px 15px;
-    opacity: 0.9;
-    border-radius: 8px;
-    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.25);
-    background-color: #ffffff
-  }
-
-  .mat-button{
-    width: 90%;
-    height: 66px;
-    margin: 21px 0 20px;
-    padding: 20px 184px 19px 182px;
+    margin: 29px 0 20px;
     border-radius: 8px;
     box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.25);
     background-color: #1195af;
-
-
-    //font-family: Rubik;
+    font-family: Rubik;
     font-size: 22px;
     font-weight: normal;
     font-stretch: normal;
@@ -70,10 +79,77 @@
     color: #ffffff;
   }
 
-  .mat-checkbox .mat-checkbox-frame {
-    border-color: black;
-    background-color: #dddddd
+  .form-field{
+    width: 80%;
+    margin-bottom: 0.8rem;
+    padding: 0;
+    border-radius: 8px;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.25);
+    background-color: rgba(255, 255, 255, 0.9);
+
+
+    input{
+      height: 100%;
+      outline: none;
+      font-size: 16px;
+
+    }
+
+    ::ng-deep .mat-form-field-wrapper{
+      margin: 0;
+      padding: 0;
+    }
+
+    ::placeholder{
+      color: #818181;
+      font-size: 16px;
+      line-height: 1.19;
+    }
+
+    input:-webkit-autofill{
+      transition: background-color 5000s ease-in-out 0s;
+    }
+
+    .mat-icon{
+      width: 45px;
+      height: 45px;
+      margin: 10px;
+    }
+
   }
+
+
+
+  .mat-checkbox, .mat-checkbox-checked {
+    color: #818181;
+    letter-spacing: normal;
+  }
+
+  .mat-checkbox-inner-container {
+    background-color: #23b836;
+  }
+
+  .mat-checkbox-inner-container {
+    border: solid 1px #707070;
+  }
+
+  ::ng-deep .mat-checkbox:not(.mat-checkbox-disabled) .mat-checkbox-ripple .mat-ripple-element {
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 2px;
+    width: 22px;
+    height: 22px;
+    //border: solid 1px #707070;
+    border-width: thin;
+  }
+
+  ::ng-deep .mat-checkbox-checked .mat-checkbox-background,
+  .mat-checkbox-indeterminate .mat-checkbox-background {
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 2px;
+    border-width: thin;
+    color: #23b836;
+  }
+
 
 
 }

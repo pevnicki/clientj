@@ -3,6 +3,8 @@ import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {UrlSerializer} from '@angular/router';
 import {MatIconRegistry} from '@angular/material/icon';
 import {DomSanitizer} from '@angular/platform-browser';
+import {AuthService} from '../../shared/state/login/auth.service';
+import {User} from '../../shared/models/user.model';
 
 
 @Component({
@@ -12,19 +14,34 @@ import {DomSanitizer} from '@angular/platform-browser';
 })
 export class LoginComponent implements OnInit {
 
+
+
   loginForm: FormGroup;
   submitted = false;
   message: string;
   hide = true;
 
-  constructor(iconRegistry: MatIconRegistry, sanitizer: DomSanitizer) {
-    iconRegistry.addSvgIcon(
-      'family',
-      sanitizer.bypassSecurityTrustResourceUrl('../assets/icons/family.svg')
+
+
+  constructor(private iconRegistry: MatIconRegistry, private sanitizer: DomSanitizer, private  authService: AuthService) {
+
+    this.iconRegistry.addSvgIcon(
+      'user-login',
+      this.sanitizer.bypassSecurityTrustResourceUrl('../assets/icons/user-login.svg')
     );
+    this.iconRegistry.addSvgIcon(
+      'eye-icon',
+      this.sanitizer.bypassSecurityTrustResourceUrl('../assets/icons/eye-icon.svg')
+    );
+    this.iconRegistry.addSvgIcon(
+      'user-icon',
+      this.sanitizer.bypassSecurityTrustResourceUrl('../assets/icons/user-icon.svg')
+    );
+
   }
 
   ngOnInit(): void {
+    this.iconsRegistry();
     // this.route.queryParams.subscribe((params: Params) => {
     //   if (params.loginAgain) {
     //     this.message = 'Please, login'
@@ -37,6 +54,14 @@ export class LoginComponent implements OnInit {
       userName: new FormControl(null, [Validators.required]),
       password: new FormControl(null, [Validators.required, Validators.minLength(6)])
     });
+
+
+    const user: User = {
+      username: 'admin',
+      password: 'admin'
+    };
+
+    this.authService.login(user);
   }
 
 
@@ -60,4 +85,8 @@ export class LoginComponent implements OnInit {
     //   this.submitted = false
     // })
   }
+
+  iconsRegistry(): void{
+
+}
 }

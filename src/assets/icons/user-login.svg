@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="47" height="47" viewBox="0 0 47 47">
+    <defs>
+        <clipPath id="clip-path">
+            <path id="Rectangle_1068" fill="#fff" stroke="#707070" d="M0 0H28V25H0z" transform="translate(110 53.942)"/>
+        </clipPath>
+        <style>
+            .cls-4{fill:#3f3f3f}
+        </style>
+    </defs>
+    <g id="User__" transform="translate(-63 -50)">
+        <g id="Ellipse_105" fill="#fafcfa" stroke="#c7c7c7" transform="translate(63 50)">
+            <circle cx="23.5" cy="23.5" r="23.5" stroke="none"/>
+            <circle cx="23.5" cy="23.5" r="23" fill="none"/>
+        </g>
+        <g id="User_Icon" clip-path="url(#clip-path)" transform="translate(-38 7.058)">
+            <g id="user_2_" transform="translate(112.12 54)">
+                <g id="Group_1223" transform="translate(0 14.205)">
+                    <g id="Group_1222">
+                        <path id="Path_810" d="M12.773 16.9C5.2 16.9 1.022 20.483 1.022 26.992a.92.92 0 0 0 .92.92H23.6a.92.92 0 0 0 .92-.92c.004-6.509-4.17-10.092-11.747-10.092zM2.9 26.071c.362-4.867 3.68-7.333 9.877-7.333s9.515 2.466 9.877 7.333z" class="cls-4" transform="translate(-1.022 -16.898)"/>
+                    </g>
+                </g>
+                <g id="Group_1225" transform="translate(5.645)">
+                    <g id="Group_1224">
+                        <path id="Path_811" d="M13.843 0a6.032 6.032 0 0 0-6.106 6.228 6.389 6.389 0 0 0 6.106 6.627 6.389 6.389 0 0 0 6.106-6.627A6.032 6.032 0 0 0 13.843 0zm0 11.015a4.553 4.553 0 0 1-4.265-4.787 4.185 4.185 0 0 1 4.265-4.387 4.232 4.232 0 0 1 4.265 4.387 4.553 4.553 0 0 1-4.265 4.787z" class="cls-4" transform="translate(-7.737)"/>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
