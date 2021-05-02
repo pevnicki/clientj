@@ -22,7 +22,7 @@ export class AuthService extends NgEntityService<Auth> {
         password: user.password
       }
     })
-      .pipe( (res: any) => {
+      .subscribe( (res: any) => {
         console.log(res, res.headers.get('Authorization'));
     });
     return true;

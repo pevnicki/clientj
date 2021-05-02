@@ -13,4 +13,5 @@ export  interface User {
   id?: number;
   userStatus?: string;
   tokenInfo?: TokenInfo;
+  rememberMe?: boolean;
 }

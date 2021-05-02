@@ -1,44 +1,99 @@
-<div class="login-container">
+<div class="container">
+
+  <form class="card" [formGroup]="loginForm" (ngSubmit)="submit()">
+
+    <div class="form-header"><img class="form-logo" src="assets/icons/juganu-logo.png"></div>
+
+    <div class="form-title">Please login to continue</div>
+
+    <div
+      class="form-control"
+    >
+      <svg for="username" class="icon-user"></svg>
+      <input id="username" type="text" placeholder="User Name" formControlName="username">
+    </div>
+
+    <div
+      class="form-control"
+    >
+      <label class="icon-user"></label>
+      <input id="password" type="password" placeholder="Password" formControlName="password">
+      <label class="icon-eye"></label>
+    </div>
 
 
-  <mat-card class="login-body">
-    <form action="">
-      <mat-card-header class="login-header"><img class="logo-img" src="assets/icons/juganu-logo.png"></mat-card-header>
+<!--    <div-->
+<!--      *ngIf="loginForm.get('email').touched && loginForm.get('email').invalid"-->
+<!--      class="validation"-->
+<!--    >-->
 
-      <mat-card-content class="login-content">
+<!--    </div>-->
 
-        <mat-card-title class="login-title">Please login to continue</mat-card-title>
-
-
-        <mat-form-field class="form-field" appearance="none">
-          <mat-icon class="login-icon" matPrefix svgIcon="user-login"></mat-icon>
-          <input type="text" matInput placeholder="User Name">
-        </mat-form-field>
+    @angular/cdk                       11.2.10 -> 12.0.0-rc.1   ng update @angular/cdk --next
+    @angular/cli                       11.2.10 -> 12.0.0-rc.1   ng update @angular/cli --next
+    @angular/core                      11.2.11 -> 12.0.0-rc.1   ng update @angular/core --next
+    @angular/material                  11.2.10 -> 12.0.0-rc.1   ng update @angular/material --next
 
 
-        <mat-form-field class="form-field" appearance="none">
-          <mat-icon class="login-icon" matPrefix svgIcon="user-login"></mat-icon>
-          <input placeholder="Password" matInput [type]="hide ? 'password' : 'text'">
-<!--          <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"-->
-<!--                  [attr.aria-pressed]="hide">-->
-<!--            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>-->
-<!--          </button>-->
-<!--          <mat-icon class="login-icon" matPrefix svgIcon="user-login"></mat-icon>-->
-        </mat-form-field>
 
-        <div class="login-error">
-          First Name must follow this pattern!
-        </div>
 
-        <div>
-          <button class="login-button" mat-button>Continue</button>
-        </div>
+    <button
+      type="submit"
+      class="btn"
+      [disabled]="loginForm.invalid || submitted"
+    >Continue
+    </button>
 
-        <mat-checkbox class="form-checkbox">Remember me</mat-checkbox>
+    <div
+      class="form-control-check-box"
+    >
+      <label>
+        <input type="checkbox" form name="my-checkbox" id="form-checkbox">
+        <label for="form-checkbox" formControlName="rememberMe">Remember me</label>
+      </label>
+    </div>
 
-      </mat-card-content>
-    </form>
-  </mat-card>
+  </form>
+
+
+  <!--  <mat-card class="login-body">-->
+  <!--    <form action="">-->
+  <!--      <mat-card-header class="login-header"><img class="logo-img" src="assets/icons/juganu-logo.png"></mat-card-header>-->
+
+  <!--      <mat-card-content class="login-content">-->
+
+  <!--        <mat-card-title class="login-title">Please login to continue</mat-card-title>-->
+
+
+  <!--        <mat-form-field class="form-field" appearance="none">-->
+  <!--          <mat-icon class="login-icon" matPrefix svgIcon="user-login"></mat-icon>-->
+  <!--          <input type="text" matInput placeholder="User Name">-->
+  <!--        </mat-form-field>-->
+
+
+  <!--        <mat-form-field class="form-field" appearance="none">-->
+  <!--          <mat-icon class="login-icon" matPrefix svgIcon="user-login"></mat-icon>-->
+  <!--          <input placeholder="Password" matInput [type]="hide ? 'password' : 'text'">-->
+  <!--&lt;!&ndash;          <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"&ndash;&gt;-->
+  <!--&lt;!&ndash;                  [attr.aria-pressed]="hide">&ndash;&gt;-->
+  <!--&lt;!&ndash;            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>&ndash;&gt;-->
+  <!--&lt;!&ndash;          </button>&ndash;&gt;-->
+  <!--&lt;!&ndash;          <mat-icon class="login-icon" matPrefix svgIcon="user-login"></mat-icon>&ndash;&gt;-->
+  <!--        </mat-form-field>-->
+
+  <!--        <div class="login-error">-->
+  <!--          First Name must follow this pattern!-->
+  <!--        </div>-->
+
+  <!--        <div>-->
+  <!--          <button class="login-button" mat-button>Continue</button>-->
+  <!--        </div>-->
+
+  <!--        <mat-checkbox class="form-checkbox">Remember me</mat-checkbox>-->
+
+  <!--      </mat-card-content>-->
+  <!--    </form>-->
+  <!--  </mat-card>-->
 
 
 </div>
